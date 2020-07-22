@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Landing Page</title>
+        <link rel="stylesheet" href="vendors/font-awesome.min.css" />
+        <style>
+             /* start main rules */
+            *{
+                box-sizing: border-box;
+            }
+            
+            :root{
+                --main-color: #333;
+                --background-gray: #EEE;
+            }
+
+            body{
+                padding: 100px 0 0;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                background: var(--background-gray);
+            }
+            
+            a{
+                text-decoration: none;
+            }
+            
+            ul{
+                list-style: none;
+            }
+            
+            .clearfix{
+                clear: both;
+            }
+            
+            .container{
+                max-width: 1000px;
+                margin: auto;
+                padding: 0 10px;
+            }
+            
+            .btn{
+                background: #F1C40F;
+                font-weight: bold;
+                font-size: 18px;
+                border: none;
+                padding: 5px 10px;
+                transition: background-color .5s;
+                cursor: pointer;
+            }
+            
+            .btn:hover{
+                background: #FF8C00;
+            }
+            
+            /* start main rules */
+            
+            /* start header */
+            
+            #header{
+                padding: 20px;
+                top: 0;
+                position: fixed;
+                width: 100%;
+                z-index: 1;
+                background: inherit;
+            }
+            
+            #header .img{
+                float: left;
+                max-width: 300px;
+            }
+            
+            #header .img img{
+                max-width: 300px;
+                height: 50px;
+            }
+            
+            #header nav{
+                float: left;
+                width: calc(100% - 300px);
+            }
+            
+            #header nav #nav{
+                text-align: end;
+                margin: 0;
+                padding: 0;
+            }
+            
+            #header nav #nav li{
+                display: inline-block;
+                text-align: center;
+                line-height: 3;
+                min-width: 15%;
+            }
+            
+            #header nav #nav li:nth-child(2){
+                margin: 0 20px;
+            }
+            
+            #header nav #nav li a{
+                color: var(--main-color);
+            }
+            
+            @media (max-width:600px){
+                body{
+                    padding: 200px 0 0;
+                }
+                
+                #header .img{
+                    float: none;
+                    margin: auto;
+                }
+                
+                #header .img img{
+                    width: 98%;
+                }
+                
+                #header nav{
+                    float: none;
+                    margin: auto;
+                    min-width: 98%;
+                }
+                
+                #header nav #nav li{
+                    display: block;
+                    line-height: 1.5;
+                }
+            }
+            
+            @media (min-width:600px) and (max-width: 650px){
+                body{
+                    padding: 120px 0 0;
+                }
+                
+                #header{
+                    padding-top: 15px;
+                }
+                
+                #header .img{
+                    margin-top: 20px;
+                }
+                
+                #header nav #nav li{
+                    display: block;
+                    line-height: 1.5;
+                }
+            }
+            
+            /* end header */
+            
+            /* start main title */
+            
+            .main-title{
+                text-align: center;
+                margin-bottom: 100px;
+            }
+            
+            .main-title input{
+                width: 300px;
+                max-width: 98%;
+                height: 30px;
+                padding: 5px;
+                border: 1px solid #CCC;
+                margin-bottom: 20px;
+            }
+            
+            /* end main title */
+            
+            /* start features */
+            
+            #features .feat{
+                margin-bottom: 40px;
+            }
+            
+            #features .feat .icon{
+                width: 20%;
+                text-align: center;
+                line-height: 2;
+                float: left;
+                color: #FF8C00;
+            }
+            
+            #features .feat h2{
+                padding: 0;
+                margin: 0;
+            }
+            
+            #features .feat .desc{
+                width: 80%;
+                float: left;
+                margin-top: 10px;
+            }
+            
+            @media (max-width: 550px){
+                #features .feat .icon{
+                    display: none;
+                }
+                
+                #features .feat h2{
+                    text-align: center;
+                }
+                
+                #features .feat .desc{
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            
+            /* end features */
+            
+            /* start how it works */
+            
+            #how{
+                text-align: center;
+                margin-top: 50px;
+            }
+            
+            @media (max-width: 575px){
+                #how iframe{
+                    width: 98%;
+                }
+            }
+            
+            /* end how it works */
+            
+            /* start pricing */
+            
+            #pricing{
+                margin-top: 70px;
+            }
+            
+            #pricing .type{
+                float: left;
+                width: 32%;
+                text-align: center;
+                border: 1px solid var(--main-color);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            #pricing .type:nth-of-type(2){
+                margin: 0 2%;
+            }
+            
+            #pricing .type .title{
+                background: #DDD;
+                margin: 0;
+                height: 50px;
+                line-height: 50px;
+                font-weight: normal;
+                font-size: 20px;
+            }
+            
+            #pricing .type .desc{
+                padding: 0;
+                margin: 20px 0;
+            }
+            
+            #pricing .type .desc li{
+                line-height: 2;
+            }
+            
+            #pricing .type button{
+                margin-bottom: 20px;
+            }
+            
+            @media (max-width: 800px){
+                #pricing .type,
+                #pricing .type:nth-of-type(2){
+                    float: none;
+                    margin: 40px auto;
+                    width: 300px;
+                    max-width: 98%;
+                }
+                
+            }
+            
+            /* end pricing */
+            
+            /* start footer */
+            
+            footer{
+                padding: 10px;
+                background: #DDD;
+                text-align: end;
+                margin-top: 20px;
+            }
+            
+            footer .footer-nav{
+                margin: 10px 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            footer .footer-nav li{
+                margin-right: 20px;
+            }
+            
+            footer .footer-nav li a{
+                color: var(--main-color);
+            }
+            
+            /* end footer */
+        </style>
+    </head>
+    <body>
+    
+<!-- start header -->
+        <header id="header">
+            <div class="img">
+                <img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="logo" />
+            </div>
+            <nav id="nav-bar">
+                <ul id="nav">
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li class="big"><a class="nav-link" href="#how">How it works</a></li>
+                    <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+<!-- end header -->
+       
+<!-- start main title -->
+        <section class="main-title">
+            <h1 class="title">Handcrafted, home-made masterpieces</h1>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input id="email" type="email" name="email" placeholder="Enter your email address" /><br />
+                <input type="submit" class="btn" id="submit" value="GET STARTED" />
+            </form>
+        </section>
+<!-- end main title -->
+        
+<!-- start features -->
+        <section id="features">
+            <div class="container">
+                <article class="feat">
+                   <div class="icon">
+                    <i class="fa fa-fire fa-3x"></i>
+                    </div>
+                    <h2>Premium Materials</h2>
+                    <p class="desc">Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+                <div class="clearfix"></div>
+                </article>
+                <article class="feat">
+                   <div class="icon">
+                    <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h2>Fast Shipping</h2>
+                    <p class="desc">We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+                    <div class="clearfix"></div>
+                </article>
+                <article class="feat">
+                   <div class="icon">
+                    <i class="fa fa-battery-full fa-3x"></i>
+                    </div>
+                    <h2>Quality Assurance</h2>
+                    <p class="desc">For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+                    <div class="clearfix"></div>
+                </article>
+            </div>
+        </section>
+<!-- end features -->
+   
+<!-- start how it works -->
+        <section id="how">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Xwl-1gWwYYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+<!-- end how it works -->
+   
+<!-- start pricing -->
+        <section id="pricing">
+           <div class="container">
+            <article class="type">
+                <h2 class="title">TENOR TROMBONE</h2>
+                <h2 class="price">$600</h2>
+                <ul class="desc">
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <button class="btn">SELECT</button>
+            </article>
+            <article class="type">
+                <h2 class="title">BASS TROMBONE</h2>
+                <h2 class="price">$900</h2>
+                <ul class="desc">
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <button class="btn">SELECT</button>
+            </article>
+            <article class="type">
+                <h2 class="title">VALVE TROMBONE</h2>
+                <h2 class="price">$1200</h2>
+                <ul class="desc">
+                    <li>Plays similar to a Trumpet</li>
+                    <li>Great for Jazz Bands</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <button class="btn">SELECT</button>
+            </article>
+            <div class="clearfix"></div>
+            </div>
+        </section>
+<!-- end pricing -->
+   
+<!-- start footer -->
+        <footer>
+            <div class="container">
+                <ul class="footer-nav">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <span class="copyrights">Copyright 2019, Abdulaziz Sayed</span>
+            </div>
+        </footer>
+<!-- end footer -->
+    </body>
+</html>
